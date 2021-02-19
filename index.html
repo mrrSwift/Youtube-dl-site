@@ -18,8 +18,8 @@
 		<h1>Youtube  Downloader</h1>
 		
 		<form class="form">
-			<input name="link" class="form-control link" type="text" placeholder="Link" required>
-			<select class="form-control formte" required>
+			<input name="link" class="form-control link" type="text" placeholder="Link" required="required">
+			<select class="form-control formte" required="required">
 				<option selected disabled>Select Video Formate</option>
 				<option value="mp3">Mp3</option>
 				<option value="mp4a">144 Mp4</option>
@@ -33,7 +33,7 @@
 			  <div class="row">
 				<div class="col-md-12">
 				  <div class="form-group mt-4 download-video">
-					<button class="btn btn-success btn-block click-btn-down" type="submit">Click Me</button>
+					<button class="btn btn-success btn-block click-btn-down" onclick="clickk()" type="submit">Click Me</button>
 				  </div>
 				</div>
 			  </div>
@@ -58,15 +58,17 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
 
   <script type="text/javascript">
+  function clickk(){
 	$(".click-btn-down").click(function(){
 		var link = $(".link").val();
 	  var fromate = $(".formte").children("option:selected").val();
 	  var src =""+link+"="+fromate+"";
 	  downloadVideo(link,fromate);
-	});
+	});}
 	function downloadVideo(link,fromate) {
 		$('.download-video').html('<iframe style="width:50%;height:60px;border:0;overflow:hidden;" scrolling="no" src="https://loader.to/api/button/?url='+link+'&f='+fromate+'"></iframe>');
 	}
+	
   </script>
 </body>
 </html>
