@@ -63,8 +63,9 @@ body :-ms-input-placeholder {
   font-weight: 300;
 }
 .wrapper {
-  background: #3bb123;
-  background: linear-gradient(to bottom right, #6711c9 0%, #e3bd53 100%);
+  background: linear-gradient(-45deg, #08f828, #e73c3c, #2385d5, #00fa85);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
   position: absolute;
   top: 0%;
   left: 0;
@@ -270,5 +271,16 @@ form button:hover {
   }
   100% {
     transform: translateY(-700px) rotate(600deg);
+  }
+}
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
   }
 }
