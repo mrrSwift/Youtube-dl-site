@@ -61,12 +61,18 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
 
   <script type="text/javascript">
+
+
+
+
   function clickk(){
 	$(".click-btn-down").click(function(){
 		var link = $(".link").val();
 	  var fromate = $(".formte").children("option:selected").val();
-	  var src =""+link+"="+fromate+"";
+	  
+	  
 	  downloadVideo(link,fromate);
+	  
 	});}
 	function downloadVideo(link,fromate) {
 		$('.download-video').html('<iframe style="width:50%;height:60px;border:0;overflow:hidden;" scrolling="no" src="https://loader.to/api/button/?url='+link+'&f='+fromate+'"></iframe>');
